@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionários</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyDkC_4sHr3Ejp4m309gPtZwj9bdA_3p9Ts",
+            authDomain: "funcionario-641a4.firebaseapp.com",
+            databaseURL: "https://funcionario-641a4.firebaseio.com",
+            projectId: "funcionario-641a4",
+            storageBucket: "funcionario-641a4.appspot.com",
+            messagingSenderId: "432347096289",
+            appId: "1:432347096289:web:63bbdc99c52d85763903a0"
+        };
+        
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="funcs.js"></script>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1 id="idStatus">Novo Funcionário</h1>
+    <form id="formCadastro">
+        <label for="idCodigo">Código</label>
+        <input type="text" id="idCodigo">
+        <label for="idNome">Nome</label>
+        <input type="text" id="idNome">
+        <label for="idSalario">Salário</label>
+        <input type="text" id="idSalario">
+        <input type="button" value="Salvar" onclick="salvar()" />
+    </form>
+
+    <h1>Funcionários Cadastrados</h1>
+    <table id="idFuncionariosTable">
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Salário</th>
+            <th>Opções</th>
+        </tr>
+
+    </table>
+
+
+</body>
+
+</html>
